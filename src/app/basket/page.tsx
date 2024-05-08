@@ -4,7 +4,15 @@ import BasketCard from "../../components/myComponents/basketCard/BasketCard";
 import { useBasket } from "@/context/BasketContext";
 
 function Basket() {
-  const { basket } = useBasket();
+  const { basket, totalItem } = useBasket();
+
+  if (totalItem === 0)
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <h2 className="font-bold text-3xl">Basket is empty</h2>
+      </div>
+    );
+
   return (
     <div className="flex flex-col px-24 py-12 gap-6">
       {basket.map((product: any) => (
