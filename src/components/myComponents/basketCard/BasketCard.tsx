@@ -2,6 +2,7 @@
 import React from "react";
 import { Product } from "../../../types/Product";
 import Image from "next/image";
+import AddRemoveButton from "@/components/addRemoveButton/AddRemoveButton";
 
 function BasketCard({ product }: { product: Product }) {
   return (
@@ -18,8 +19,9 @@ function BasketCard({ product }: { product: Product }) {
         <p className="text-wrap"> {product.description} </p>
       </div>
       <div className="flex flex-row lg:flex-col lg:justify-center justify-between px-10 lg:px-0 lg:items-end">
-        <h2 className="font-bold text-xl mb-6"> $ {product.price} </h2>
-        <h2>Quantity: {product.quantity} </h2>
+        <div className="pt-6">
+          <AddRemoveButton product={product} />
+        </div>
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ function AddRemoveButton({ product }: { product: Product }) {
         </span>
         {quantity > 0 && <span className="font-bold">Basket: {quantity}</span>}
       </div>
-      <div className="flex flex-col w-24 h-12">
+      <div className="flex flex-col gap-4 w-24 h-12">
         <span
           className="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2.5 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           onClick={handleAddToCart}
