@@ -7,9 +7,16 @@
 .link:hover,
 .active {
   font-size: 1.1rem;
-  border-bottom: 3px solid white;
+  position: relative;
 }
 
 .link:hover {
   filter: drop-shadow(0rem 0.7rem 0.3rem white);
+}
+
+.active::after {
+  content: "▶︎";
+  position: absolute;
+  top: 0;
+  left: -20px;
 }
