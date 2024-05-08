@@ -1,0 +1,15 @@
+.link {
+  font-size: 1.1rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.active {
+  font-size: 1.1rem;
+  border-bottom: 3px solid white;
+}
+
+.link:hover {
+  filter: drop-shadow(0rem 0.7rem 0.3rem white);
+}
